@@ -1,17 +1,16 @@
-﻿# DownCLI Suite (FB / IG / YT)
+﻿# medsos-downloader (FB / IG / YT)
 
 ## Clone dari GitHub
 
-Repo name: **medsos-downloader**
+Repo: **medsos-downloader**
 
 ```bash
 git clone https://github.com/indrafata980/medsos-downloader.git
 cd medsos-downloader
 ```
 
-
-
 ---
+
 ## Isi folder
 - `down_video.py` → download **video** (prioritas 60fps, fallback otomatis), auto convert ke **H.264**, hasil final 1 file.
 - `down_music.py` → download **audio** jadi **MP3**.
@@ -34,7 +33,7 @@ cd medsos-downloader
 ## 1) Setup Windows (CMD)
 
 ```bat
-cd /d D:\download\downcli_suite
+cd /d D:\download\medsos-downloader
 setup.bat
 ```
 
@@ -42,29 +41,33 @@ Kalau `ffmpeg` belum ada di PATH, install dulu atau pakai path ffmpeg di script.
 
 ---
 
-\n> Catatan Termux: jangan jalankan pip install -U pip karena akan error Installing pip is forbidden.\n\n```bash
-cd ~/downcli_suite
+## 2) Setup Termux
+
+> Catatan Termux: **jangan** jalankan `pip install -U pip` karena akan error: `Installing pip is forbidden`.
+
+```bash
+cd ~/medsos-downloader
 chmod +x setup.sh
 ./setup.sh
 ```
 
 ---
 
-## Pintasan perintah di Termux (`custom`, `video`, `music`)
+## 3) Pintasan perintah di Termux (`custom`, `video`, `music`)
 
 Buat command sekali aja:
 
 ```bash
 # custom -> buka menu interaktif
-echo 'cd /data/data/com.termux/files/home/downcli_suite && python downcli_menu.py' > /data/data/com.termux/files/usr/bin/custom
+echo 'cd /data/data/com.termux/files/home/medsos-downloader && python downcli_menu.py' > /data/data/com.termux/files/usr/bin/custom
 chmod +x /data/data/com.termux/files/usr/bin/custom
 
 # video -> langsung downloader video
-echo 'cd /data/data/com.termux/files/home/downcli_suite && python down_video.py' > /data/data/com.termux/files/usr/bin/video
+echo 'cd /data/data/com.termux/files/home/medsos-downloader && python down_video.py' > /data/data/com.termux/files/usr/bin/video
 chmod +x /data/data/com.termux/files/usr/bin/video
 
 # music -> langsung downloader music
-echo 'cd /data/data/com.termux/files/home/downcli_suite && python down_music.py' > /data/data/com.termux/files/usr/bin/music
+echo 'cd /data/data/com.termux/files/home/medsos-downloader && python down_music.py' > /data/data/com.termux/files/usr/bin/music
 chmod +x /data/data/com.termux/files/usr/bin/music
 ```
 
@@ -77,6 +80,9 @@ music
 ```
 
 ---
+
+## 4) Cara pakai cepat
+
 ### A. Download video (langsung)
 ```bash
 python down_video.py
@@ -107,19 +113,19 @@ Fitur:
 
 ---
 
-## 4) Lokasi hasil download
+## 5) Lokasi hasil download
 Default disimpan ke folder:
 - `downloads/` (di folder tempat script dijalankan)
 
 Contoh Windows:
-- `D:\download\downcli_suite\downloads`
+- `D:\download\medsos-downloader\downloads`
 
 Contoh Termux:
-- `~/downcli_suite/downloads`
+- `~/medsos-downloader/downloads`
 
 ---
 
-## 5) Format file output
+## 6) Format file output
 - Video final: `YYYYMMDD_PLATFORM_ID.mp4`
 - Audio final: `YYYYMMDD_PLATFORM_ID.mp3`
 
@@ -130,7 +136,7 @@ Contoh `PLATFORM`:
 
 ---
 
-## 6) Troubleshooting
+## 7) Troubleshooting
 
 ### Error: `ffmpeg / ffprobe not found`
 - Pastikan ffmpeg terinstall dan bisa dipanggil (`ffmpeg -version`)
@@ -147,8 +153,5 @@ Contoh `PLATFORM`:
 
 ---
 
-## 7) Catatan penggunaan
+## 8) Catatan penggunaan
 Gunakan hanya untuk konten yang kamu punya izin akses/unduh, dan patuhi aturan platform setempat.
-
-
-
