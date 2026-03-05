@@ -42,9 +42,7 @@ Kalau `ffmpeg` belum ada di PATH, install dulu atau pakai path ffmpeg di script.
 
 ---
 
-## 2) Setup Termux
-
-```bash
+\n> Catatan Termux: jangan jalankan pip install -U pip karena akan error Installing pip is forbidden.\n\n```bash
 cd ~/downcli_suite
 chmod +x setup.sh
 ./setup.sh
@@ -151,5 +149,6 @@ Contoh `PLATFORM`:
 
 ## 7) Catatan penggunaan
 Gunakan hanya untuk konten yang kamu punya izin akses/unduh, dan patuhi aturan platform setempat.
+
 
 
